@@ -8,5 +8,5 @@ def newmaven()
 }  
 def newdeploy(ip,appname)
 {
-  deploy "$(deploy adapters: [tomcat9(credentialsId: 'b0c1e30f-6a32-4786-871c-342a7de2ad94', path: '', url: '${ip}')], contextPath: '${appname}', war: '**/*.war'
+  deploy "$(deploy adapters: [tomcat9(credentialsId: 'b0c1e30f-6a32-4786-871c-342a7de2ad94', path: '', url: "${ip}")], contextPath: "${appname}", war: '**/*.war'
 }  
