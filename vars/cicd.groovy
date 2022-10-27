@@ -16,5 +16,5 @@ def deletecontainer(containername)
 }  
 def copy(sourcepath,destinationpath)
 {
-  sh 'sudo -S cp -r ${sourcepath} ${destinationpath}'
+  sh 'sudo -S cp -R ${sourcepath} ${destinationpath}'
 }
