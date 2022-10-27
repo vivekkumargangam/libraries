@@ -1,6 +1,6 @@
 def newgit(branch,repo)
 {
-  git branch: "${branch}"', url: "${repo}"
+  git branch: "${branch}", credentialsId: 'cred', url: "${repo}"
 } 
 def imagebuilding(imagename,path)
 {
