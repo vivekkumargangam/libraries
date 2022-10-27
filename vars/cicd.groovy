@@ -18,4 +18,9 @@ def deletecontainer(containername)
 {
   sh "sudo -S docker rm -f '${containername}'"
 }  
-
+def imagename()
+{
+  sh 'read -p "Enter the image_name :" image_name'
+  sh 'read -p "Enter the path of the file :" path'
+  sh 'docker build --no-cache -t $image_name -f Dockerfile $path'
+}
