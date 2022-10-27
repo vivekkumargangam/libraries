@@ -4,17 +4,24 @@ def newgit(branch,repo)
 } 
 def imagebuilding(imagename,path)
 {
-  sh 'sudo -S docker build -t "${imagename}" -f Dockerfile "${path}"'
+  echo "${imagename}"
+  echo "${path}"
+  sh 'sudo -S docker build -t ${imagename} -f Dockerfile ${path}'
 } 
 def runcontainer(containername,imagename)
 {
-  sh 'sudo -S docker run --name "{containername}" -itd "{imagename}"'
+  echo "${containername}"
+  echo "${imagename}" 
+  sh 'sudo -S docker run --name ${containername} -itd ${imagename}'
 } 
 def deletecontainer(containername)
 {
-  sh 'sudo -S docker rm -f "${containername}"'
+  echo "${containername}"
+  sh 'sudo -S docker rm -f ${containername}'
 }  
 def copy(sourcepath,destinationpath)
 {
-  sh 'sudo -S cp -r "${sourcepath}" "${destinationpath}"'
+  echo "${sourcepath}"
+  echo "${destinationpath}" 
+  sh 'sudo -S cp -r ${sourcepath} ${destinationpath}'
 }
