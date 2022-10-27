@@ -14,4 +14,8 @@ def deletecontainer(containername)
 {
   sh 'sudo -S docker rm -f "${containername}"'
 }  
+def copy(sourcepath,destinationpath)
+{
+  sh 'sudo -S cp -r "$(sourcepath)" "$(destinationpath)"'
+}  
 
