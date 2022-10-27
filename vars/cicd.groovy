@@ -4,7 +4,7 @@ def newgit(branch,repo)
 } 
 def copy(sourcepath,destinationpath)
 {
-  sh 'sudo -S cp -rf ${sourcepath} ${destinationpath}'
+  sh "sudo -S cp -rf '${sourcepath}' '${destinationpath}'"
 }
 def imagebuilding(imagename,path)
 {
